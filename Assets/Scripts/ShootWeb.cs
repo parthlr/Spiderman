@@ -118,6 +118,7 @@ public class ShootWeb : MonoBehaviour {
 				LaunchHook ();
 			} else {
 				DetachHook ();
+				chest.GetComponent<Rigidbody> ().AddForce (Vector3.zero);
 				Destroy (lineRenderers [side].gameObject);
 			}
 		}
